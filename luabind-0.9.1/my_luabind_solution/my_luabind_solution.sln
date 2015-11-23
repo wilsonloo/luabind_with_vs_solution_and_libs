@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "my_luabind_project", "my_luabind_project\my_luabind_project.vcxproj", "{AD45C4A2-FCA5-47EE-99D7-4B5B18035139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugStatic|Win32 = DebugStatic|Win32
+		ReleaseStatic|Win32 = ReleaseStatic|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD45C4A2-FCA5-47EE-99D7-4B5B18035139}.DebugStatic|Win32.ActiveCfg = static_debug|Win32
+		{AD45C4A2-FCA5-47EE-99D7-4B5B18035139}.DebugStatic|Win32.Build.0 = static_debug|Win32
+		{AD45C4A2-FCA5-47EE-99D7-4B5B18035139}.ReleaseStatic|Win32.ActiveCfg = static_release|Win32
+		{AD45C4A2-FCA5-47EE-99D7-4B5B18035139}.ReleaseStatic|Win32.Build.0 = static_release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

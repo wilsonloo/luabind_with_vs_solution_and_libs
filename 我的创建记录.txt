@@ -1,0 +1,26 @@
+为了准确， 关闭了360
+luabind-0.9.1 必须使用 lua5.1、boost_1_54、vc110
+
+一.lua5.1 使用binary 方式安装 http://www.cr173.com/soft/44725.html
+  拷贝安装目录里的 include / lib
+
+二.luabind-0.9.1 下载自 http://sourceforge.net/projects/luabind/?source=typ_redirect
+
+三.参考luabind的帮助文档doc 进行 LUA_PATH 的设置、BOOST_ROOT 的设置(该BOOST_ROOT是指boost解压后的目录，并非程序开发只需要的include/lib目录)
+
+
+四.使用vs的创建项目向导 创建新的静态库项目，选择静态库、去掉'使用预编译头'复选框
+
+五.在luabind根目录下， 将会有src、luabind、luabind/detail 三个目录，添加该目录下的全部文件到项目
+
+六.设置luabind所需其他库，我的方式是添加 项目属性文件 directions.props
+   在该文件内添加宏 LUA_INCLUDE_DIR 指向 lua的安装根目录下的include目录
+   在该文件内添加宏 BOOST_HOME_DIR 指向 boost 的安装根目录
+   在 Additional Include Directions 添加:
+      $(LUA_INCLUDE_DIR)
+      $(BOOST_HOME_DIR)
+      $(SolutionDir)..\
+
+   其中，$(SolutionDir)..\ 指向luabind的根目录，编译luabind时还需要使用其他的文件
+
+七.项目输出目标名为 luabind_static-rtl_vc110_debug.lib 和 luabind_static-rtl_vc110_release.lib
